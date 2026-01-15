@@ -13,6 +13,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_NOTEHUB_TOKEN === "production"
+      ? "https://notehub.app"
+      : "http://localhost:3000"
+  ),
   title: "NoteHub",
   description:
     "Manage, filter, and organize your notes efficiently with NoteHub.",
@@ -40,7 +45,7 @@ export const metadata: Metadata = {
     title: "NoteHub - Your Personal Knowledge Base",
     description:
       "Manage, filter, and organize your notes efficiently with NoteHub.",
-    images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
+    images: ["/meta-image.png"],
   },
 };
 

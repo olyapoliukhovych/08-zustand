@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: `Notes: ${displayTag} | NoteHub`,
       description: `Browsing all notes filtered by category: ${displayTag}.`,
-      images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
+      images: ["/meta-image.png"],
     },
   };
 }

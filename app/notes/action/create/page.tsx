@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Create New Note | NoteHub",
     description: "Draft and save a new note to your personal collection.",
-    images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
+    images: ["/meta-image.png"],
   },
 };
 

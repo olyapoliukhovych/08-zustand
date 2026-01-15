@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Page Not Found | NoteHub",
     description:
       "Sorry, the page you are looking for does not exist on NoteHub.",
-    images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
+    images: ["/meta-image.png"],
   },
 };
 
