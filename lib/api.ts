@@ -1,5 +1,6 @@
 import axios from "axios";
-import type { NewNoteData, Note } from "@/types/note";
+import type { NewNoteData, Note, NoteTag } from "@/types/note";
+import { Tag } from "@/components/NoteForm/NoteForm";
 
 const noteApi = axios.create({
   baseURL: "https://notehub-public.goit.study/api",
@@ -58,3 +59,13 @@ export const CreateNote = async (data: NewNoteData) => {
   const res = await axios.post<Note>("notes", data);
   return res.data;
 };
+
+export async function fetchTags(): Promise<Tag[]> {
+  return [
+    { id: "1", name: "Todo" },
+    { id: "2", name: "Work" },
+    { id: "3", name: "Personal" },
+    { id: "4", name: "Meeting" },
+    { id: "5", name: "Shopping" },
+  ];
+}

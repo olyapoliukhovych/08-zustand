@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Notes: ${displayTag} | NoteHub`,
       description: `Browsing all notes filtered by category: ${displayTag}.`,
       url: `https://notehub.com/notes/filter/${tag}`,
-      images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
+      images: ["file:///Users/olyaa/Downloads/notehub-og-meta.png"],
     },
   };
 }

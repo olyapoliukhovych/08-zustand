@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .label {
@@ -10,26 +10,49 @@
   font-size: 14px;
   font-weight: 500;
   color: #212529;
+  gap: 8px;
 }
 
-.input,
-.textarea,
-.select {
-  margin-top: 4px;
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-}
-
-.textarea {
+.label textarea {
   resize: none;
+  height: 120px;
+}
+
+.label input,
+.label textarea,
+.label select {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 250ms ease;
+  background-color: #fff;
+  font-family: inherit;
+  color: #333;
+}
+
+.label input:hover,
+.label textarea:hover,
+.label select:hover {
+  border-color: #550c72;
+}
+
+.label input::placeholder,
+.label textarea::placeholder {
+  font-family: inherit;
+  color: #aaa;
+  opacity: 1;
 }
 
 .actions {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
+}
+
+.actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .submitBtn {

@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useNoteDraftStore } from "@/lib/store/noteStore";
 import { NewNoteData } from "@/types/note";
 
-interface Tag {
+export interface Tag {
   id: string;
   name: string;
 }
@@ -58,10 +58,11 @@ export default function NoteForm({ tags }: NoteFormProps) {
           onChange={handleChange}
           defaultValue={draft?.title}
           placeholder="Title"
+          minLength={3}
+          maxLength={50}
           required
         />
       </label>
-
       <label className={css.label}>
         Content
         <textarea
@@ -69,10 +70,10 @@ export default function NoteForm({ tags }: NoteFormProps) {
           onChange={handleChange}
           defaultValue={draft?.content}
           placeholder="Enter text..."
+          minLength={3}
           required
         />
       </label>
-
       <label className={css.label}>
         Tag
         <select name="tag" defaultValue={draft?.tag} onChange={handleChange}>

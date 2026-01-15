@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "NoteHub",
   description:
     "Manage, filter, and organize your notes efficiently with NoteHub.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "NoteHub - Your Personal Knowledge Base",
     description:
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "NoteHub",
     images: [
       {
-        url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+        url: "file:///Users/olyaa/Downloads/notehub-og-meta.png",
         width: 1200,
         height: 630,
         alt: "NoteHub Preview",

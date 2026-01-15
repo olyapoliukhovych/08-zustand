@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Sorry, the page you are looking for does not exist on NoteHub.",
     url: "https://notehub.com/404",
-    images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
+    images: ["file:///Users/olyaa/Downloads/notehub-og-meta.png"],
   },
 };
 

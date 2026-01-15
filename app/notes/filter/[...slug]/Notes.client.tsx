@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useDebounce } from "use-debounce";
 import { fetchNotes } from "@/lib/api";
@@ -14,20 +14,20 @@ import css from "@/app/notes/NotesPage.module.css";
 import Link from "next/link";
 
 export default function NotesClient({ serverTag }: { serverTag?: string }) {
-  const params = useParams();
+  // const params = useParams();
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [debouncedSearch] = useDebounce(search, 500);
   // const [isCreateOpen, setIsCreateOpen] = useState(false);
 
-  const slug = params.slug;
-  const activeTag =
-    serverTag ??
-    (Array.isArray(slug) ? slug[0] : slug === "all" ? undefined : slug);
+  // const slug = params.slug;
+  // const activeTag =
+  //   serverTag ??
+  // Array.isArray(slug) ? slug[0] : slug === "all" ? undefined : slug;
 
   const { data, isLoading } = useQuery({
-    queryKey: ["notes", page, debouncedSearch, activeTag],
-    queryFn: () => fetchNotes(page, debouncedSearch, activeTag),
+    queryKey: ["notes", page, debouncedSearch, serverTag],
+    queryFn: () => fetchNotes(page, debouncedSearch, serverTag),
     placeholderData: keepPreviousData,
     refetchOnMount: false,
   });
@@ -49,7 +49,7 @@ export default function NotesClient({ serverTag }: { serverTag?: string }) {
           />
         )}
 
-        <Link href="/notes/action/create" className={css.createButton}>
+        <Link href="/notes/action/create" className={css.createLink}>
           Create note +
         </Link>
       </header>

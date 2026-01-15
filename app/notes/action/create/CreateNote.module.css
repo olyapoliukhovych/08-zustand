@@ -1,18 +1,24 @@
 .main {
-  flex: 1;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: rgb(247, 249, 250);
 }
 
 .container {
-  width: 90%;
-  max-width: 1280px;
-  margin: 0px auto;
-  padding: 0 16px 16px;
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .title {
   font-size: 36px;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 60px;
   text-align: center;
 }
