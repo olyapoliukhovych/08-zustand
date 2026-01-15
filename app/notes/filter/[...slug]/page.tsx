@@ -18,8 +18,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Notes: ${displayTag} | NoteHub`,
       description: `Browsing all notes filtered by category: ${displayTag}.`,
-      url: `https://notehub.com/notes/filter/${tag}`,
+      url: `https://notehub.app/notes/filter/${displayTag}`,
       images: ["/meta-image.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Notes: ${displayTag} | NoteHub`,
+      description: `Browsing all notes filtered by category: ${displayTag}.`,
+      images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
     },
   };
 }

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "NoteHub - Your Personal Knowledge Base",
     description:
       "Manage, filter, and organize your notes efficiently with NoteHub.",
-    url: "https://notehub.com",
+    url: "https://notehub.app",
     siteName: "NoteHub",
     images: [
       {
@@ -34,6 +34,13 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NoteHub - Your Personal Knowledge Base",
+    description:
+      "Manage, filter, and organize your notes efficiently with NoteHub.",
+    images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
   },
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Page Not Found | NoteHub",
     description:
       "Sorry, the page you are looking for does not exist on NoteHub.",
-    url: "https://notehub.com/404",
+    url: "https://notehub.app/not-found",
     images: [
       {
         url: "/meta-image.png",
@@ -17,6 +17,13 @@ export const metadata: Metadata = {
         alt: "Page Not Found",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Page Not Found | NoteHub",
+    description:
+      "Sorry, the page you are looking for does not exist on NoteHub.",
+    images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
   },
 };
 
