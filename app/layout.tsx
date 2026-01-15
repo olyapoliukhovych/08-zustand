@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "NoteHub",
     images: [
       {
-        url: "file:///Users/olyaa/Downloads/notehub-og-meta.png",
+        url: "/meta-image.png",
         width: 1200,
         height: 630,
         alt: "NoteHub Preview",

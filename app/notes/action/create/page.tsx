@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Create New Note | NoteHub",
     description: "Draft and save a new note to your personal collection.",
     url: "https://notehub.com/notes/action/create",
-    images: ["file:///Users/olyaa/Downloads/notehub-og-meta.png"],
+    images: ["/meta-image.png"],
   },
 };
 

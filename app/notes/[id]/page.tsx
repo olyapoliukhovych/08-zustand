@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: note.title,
       description: note.content.slice(0, 100),
       url: `https://notehub.com/notes/${id}`,
-      images: ["file:///Users/olyaa/Downloads/notehub-og-meta.png"],
+      images: ["/meta-image.png"],
     },
   };
 }

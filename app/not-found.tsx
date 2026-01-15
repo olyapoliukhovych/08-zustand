@@ -1,10 +1,5 @@
-"use client";
-
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import css from "./NotFound.module.css";
 import { Metadata } from "next";
+import NotFoundContent from "@/components/NotFoundContent/NotFoundContent";
 
 export const metadata: Metadata = {
   title: "Page Not Found | NoteHub",
@@ -14,32 +9,17 @@ export const metadata: Metadata = {
     description:
       "Sorry, the page you are looking for does not exist on NoteHub.",
     url: "https://notehub.com/404",
-    images: ["file:///Users/olyaa/Downloads/notehub-og-meta.png"],
+    images: [
+      {
+        url: "/meta-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Page Not Found",
+      },
+    ],
   },
 };
 
-const NotFound = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => router.push("/"), 10000);
-    return () => clearTimeout(timer);
-  }, [router]);
-
-  return (
-    <div className={css.container}>
-      <h1 className={css.title}>404 - Page Not Found</h1>
-      <p className={css.description}>
-        Sorry, the page you are looking for does not exist.
-      </p>
-      <p className={css.description}>
-        You will be redirected to the home page in 10 seconds.
-      </p>
-      <Link href="/" className={css.link}>
-        Go back home
-      </Link>
-    </div>
-  );
-};
-
-export default NotFound;
+export default function NotFound() {
+  return <NotFoundContent />;
+}

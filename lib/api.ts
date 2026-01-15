@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { NewNoteData, Note, NoteTag } from "@/types/note";
+import type { NewNoteData, Note } from "@/types/note";
 import { Tag } from "@/components/NoteForm/NoteForm";
 
 const noteApi = axios.create({
